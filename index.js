@@ -5,6 +5,7 @@ var EmailInput = require('email-input')
 var ZipInput = require('zip-input')
 var h = require('virtual-dom/h')
 var submitEvent = require('value-event/submit')
+var Event = require('weakmap-event')
 
 module.exports = App
 
@@ -18,9 +19,12 @@ function App () {
   })
 }
 
+var SubmitEvent = Event()
+App.onSubmit = SubmitEvent.listen
+
 function submit (state, data) {
   if (!ready(state)) return
-  console.log('i am ready to submit')
+  SubmitEvent.broadcast(state, data)
 }
 
 function ready (state) {

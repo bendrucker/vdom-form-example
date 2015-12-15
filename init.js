@@ -14,3 +14,5 @@ var loop = Loop(state(), App.render, vdom)
 state(loop.update)
 
 document.body.appendChild(loop.target)
+
+App.onSubmit(state, console.log.bind(console, 'submitted:'))
