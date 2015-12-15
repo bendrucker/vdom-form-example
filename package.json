@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dom-delegator": "~13.1.0",
+    "dover": "~1.1.0",
+    "email-input": "~3.0.0",
+    "main-loop": "~3.2.0",
+    "observ-struct": "~6.0.0",
+    "value-event": "~5.1.0",
+    "virtual-dom": "~2.1.1",
+    "zip-input": "~3.0.0"
+  },
+  "devDependencies": {
+    "budo": "~7.0.2"
+  },
+  "scripts": {
+    "start": "budo init.js"
+  }
+}
